@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { ArrowRight, BriefcaseBusiness, CalendarDays, ChevronDown, Compass, FileText, Globe2, Heart, Menu, School, Sparkles, Trophy, Users, X } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, CalendarDays, ChevronDown, Compass, FileText, Globe2, Heart, Menu, School, Trophy, Users, X } from 'lucide-react'
 import DiscoveryHero from './components/DiscoveryHero'
 import ServiceExperience from './components/ServiceExperience'
 import type { PortalKey } from './data/portalContent'
