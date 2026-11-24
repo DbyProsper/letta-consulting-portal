@@ -16,7 +16,6 @@ export default function DiscoveryHero({ onExplore }: DiscoveryHeroProps) {
   const [selected, setSelected] = useState<string[]>([])
   const [active, setActive] = useState('interests')
   const [mixOpen, setMixOpen] = useState(false)
-  const activeItem = discoveryItems.find(item => item.id === active) ?? discoveryItems[0]
 
   const toggleItem = (id: string) => {
     setActive(id)
