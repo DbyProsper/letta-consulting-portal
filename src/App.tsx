@@ -4,6 +4,8 @@ import DiscoveryHero from './components/DiscoveryHero'
 import ServiceExperience from './components/ServiceExperience'
 import StudentDashboard from './components/StudentDashboard'
 import OpportunityHub from './components/OpportunityHub'
+import ParentGuardianSpace from './components/ParentGuardianSpace'
+import CareerGames from './components/CareerGames'
 import type { PortalKey } from './data/portalContent'
 
 const pathways = [
@@ -22,7 +24,7 @@ const journeys = [
 const shortcuts = [
   { title: 'Opportunity Hub', description: 'Career events, bursaries & opportunities', icon: Trophy, key: 'opportunities' as const },
   { title: 'CV & Cover Letter Builder', description: 'Create your next application', icon: FileText, key: 'career' as const },
-  { title: 'Parent & Guardian Support', description: 'Guidance for the people behind you', icon: Users, key: 'wellness' as const },
+  { title: 'Parent & Guardian Support', description: 'Guidance for the people behind you', icon: Users, key: 'parents' as const },
   { title: 'School Partnerships', description: 'Bring guidance to your school', icon: School, key: 'professional' as const },
   { title: 'Corporate Wellness (EAP)', description: 'Support a healthier workplace', icon: BriefcaseBusiness, key: 'professional' as const },
 ]
@@ -65,10 +67,10 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [language, setLanguage] = useState('English')
   const [languageOpen, setLanguageOpen] = useState(false)
-  const [activePage, setActivePage] = useState<PortalKey | 'dashboard' | 'opportunities' | null>(null)
+  const [activePage, setActivePage] = useState<PortalKey | 'dashboard' | 'opportunities' | 'parents' | 'games' | null>(null)
   const [bookingService, setBookingService] = useState<string | null>(null)
 
-  const openPage = (page: PortalKey | 'dashboard' | 'opportunities') => {
+  const openPage = (page: PortalKey | 'dashboard' | 'opportunities' | 'parents' | 'games') => {
     setActivePage(page)
     setMenuOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -80,6 +82,8 @@ function App() {
   }
 
   if (activePage === 'opportunities') return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><OpportunityHub onBook={openBooking}/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
+  if (activePage === 'parents') return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><ParentGuardianSpace onBook={openBooking}/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
+  if (activePage === 'games') return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><CareerGames/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
   if (activePage === 'dashboard') return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><StudentDashboard onExplore={() => openPage('career')} onHome={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}/></>
   if (activePage) return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><ServiceExperience page={activePage} onBack={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}} onBook={openBooking}/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
 
@@ -123,11 +127,11 @@ function App() {
     <section className="support-panel panel" id="team">
       <div className="support-intro"><span className="section-kicker">HERE WHEN YOU NEED US</span><h2>Support that<br/>grows with you</h2><p>Expert guidance. A brighter future.</p><button className="primary-button compact" onClick={()=>openBooking('Professional consultation')}>Book a Session <ArrowRight size={16}/></button></div>
       <div className="team-feature"><div className="team-photo" role="img" aria-label="Professional consultant ready to support you"/><div><span className="section-kicker">A COLLABORATIVE PRACTICE</span><h3>People-first support, backed by professionals.</h3><p>Connect with the right service pathway, from career guidance to psychological and workplace support.</p><button className="outline-button" onClick={()=>openPage('professional')}>Explore our team <ArrowRight size={14}/></button></div></div>
-      <div className="service-strip">{[{title:'Opportunity Hub',icon:Trophy,key:'opportunities' as const},{title:'CV Builder',icon:FileText,key:'career' as const},{title:'Parent & Guardian',icon:Users,key:'wellness' as const},{title:'School Partnerships',icon:School,key:'professional' as const},{title:'Corporate Wellness',icon:BriefcaseBusiness,key:'professional' as const}].map(({title,icon:Icon,key})=><button key={title} onClick={()=>openPage(key)}><span><Icon size={22}/></span><small>{title}</small></button>)}</div>
+      <div className="service-strip">{[{title:'Opportunity Hub',icon:Trophy,key:'opportunities' as const},{title:'CV Builder',icon:FileText,key:'career' as const},{title:'Parent & Guardian',icon:Users,key:'parents' as const},{title:'School Partnerships',icon:School,key:'professional' as const},{title:'Corporate Wellness',icon:BriefcaseBusiness,key:'professional' as const}].map(({title,icon:Icon,key})=><button key={title} onClick={()=>openPage(key)}><span><Icon size={22}/></span><small>{title}</small></button>)}</div>
     </section>
 
     <section className="languages-band"><div><Globe2 size={20}/><span>Guidance that speaks your language.</span></div><p>English · isiZulu · Sesotho · Setswana · isiXhosa</p><span className="language-note">Language selection preview: {language}</span></section>
-    <footer id="footer"><Brand/><div className="footer-links"><button onClick={()=>openPage('career')}>Career Guidance</button><i/><button onClick={()=>openPage('wellness')}>Psychological Wellness</button><i/><button onClick={()=>openPage('professional')}>Professional Support</button></div><div className="footer-languages">{languages.map(item=><button key={item} onClick={()=>setLanguage(item)} className={language===item?'chosen':''}>{item}</button>)}</div><p className="footer-tagline">Real Support. Brighter Futures.<span/></p><small className="footer-legal">© {new Date().getFullYear()} Letta Consulting</small></footer>
+    <footer id="footer"><Brand/><div className="footer-links"><button onClick={()=>openPage('career')}>Career Guidance</button><i/><button onClick={()=>openPage('wellness')}>Psychological Wellness</button><i/><button onClick={()=>openPage('professional')}>Professional Support</button><i/><button onClick={()=>openPage('parents')}>Parent & Guardian</button><i/><button onClick={()=>openPage('games')}>Future Games</button></div><div className="footer-languages">{languages.map(item=><button key={item} onClick={()=>setLanguage(item)} className={language===item?'chosen':''}>{item}</button>)}</div><p className="footer-tagline">Real Support. Brighter Futures.<span/></p><small className="footer-legal">© {new Date().getFullYear()} Letta Consulting</small></footer>
     {bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}
   </main>
 }
