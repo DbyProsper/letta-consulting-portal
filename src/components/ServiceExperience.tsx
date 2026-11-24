@@ -1,5 +1,6 @@
 import { ArrowLeft, ArrowRight, CheckCircle2, Compass, Heart, BriefcaseBusiness } from 'lucide-react'
 import { portalContent, type PortalKey } from '../data/portalContent'
+import CareerDiscovery from './CareerDiscovery'
 
 const icons = { career: Compass, wellness: Heart, professional: BriefcaseBusiness }
 
@@ -26,6 +27,7 @@ export default function ServiceExperience({ page, onBack, onBook }: Props) {
       <div className="service-section-heading"><span className="section-kicker">EXPLORE THE POSSIBILITIES</span><h2>Find the support that<br/>moves you forward.</h2><p>Choose a starting point. You can explore at your own pace.</p></div>
       <div className="service-feature-grid">{content.features.map((feature,index)=><article className="service-feature-card" key={feature.title}><span className="feature-number">0{index+1}</span><CheckCircle2 size={20}/><h3>{feature.title}</h3><p>{feature.text}</p><button onClick={() => onBook(feature.title)}>Learn more <ArrowRight size={14}/></button></article>)}</div>
     </section>
+    {page === 'career' && <CareerDiscovery/>}
     <section className="service-bottom-cta"><div><span className="section-kicker">A REAL PERSON. A CLEAR NEXT STEP.</span><h2>Not sure where to begin?</h2><p>Talk to the Letta Consulting team about the support or service that fits your needs.</p></div><button className="primary-button" onClick={() => onBook(content.eyebrow)}>Talk to our team <ArrowRight size={16}/></button></section>
   </main>
 }
