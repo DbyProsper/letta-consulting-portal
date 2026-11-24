@@ -59,8 +59,8 @@ export default function DiscoveryHero({ onExplore }: DiscoveryHeroProps) {
             dragMomentum={false}
             whileHover={{ scale: 1.08, zIndex: 8 }}
             whileDrag={{ scale: 1.14, zIndex: 10, cursor: 'grabbing' }}
-            onClick={() => toggleItem(id)}
-            onDragEnd={() => { setActive(id); setSelected(current => current.includes(id) ? current : [...current, id]); setMixOpen(false) }}
+            onTap={() => toggleItem(id)}
+            onDragEnd={() => { setActive(id); setSelected(current => current.includes(id) ? current : [...current, id]); setMixOpen(true) }}
             aria-label={`${label}: ${hint}. Drag or select to add to your mix.`}
             style={{ zIndex: active === id ? 6 : 4 }}
             initial={{ opacity: 0, scale: .6, y: 20 }}
