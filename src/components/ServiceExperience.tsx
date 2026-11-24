@@ -2,6 +2,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, Compass, Heart, BriefcaseBusiness 
 import { portalContent, type PortalKey } from '../data/portalContent'
 import CareerDiscovery from './CareerDiscovery'
 import WellnessExperience from './WellnessExperience'
+import ProfessionalExperience from './ProfessionalExperience'
 
 const icons = { career: Compass, wellness: Heart, professional: BriefcaseBusiness }
 
@@ -24,7 +25,7 @@ export default function ServiceExperience({ page, onBack, onBook }: Props) {
       </div>
       <div className="service-hero-art"><span className="service-icon-orb"><Icon size={58} /></span><span className="service-art-ring ring-one"/><span className="service-art-ring ring-two"/><span className="service-art-spark">✦</span></div>
     </section>
-    {page === 'wellness' ? <WellnessExperience onBook={onBook}/> : <>
+    {page === 'wellness' ? <WellnessExperience onBook={onBook}/> : page === 'professional' ? <ProfessionalExperience onBook={onBook}/> : <>
       <section className="service-feature-section">
         <div className="service-section-heading"><span className="section-kicker">EXPLORE THE POSSIBILITIES</span><h2>Find the support that<br/>moves you forward.</h2><p>Choose a starting point. You can explore at your own pace.</p></div>
         <div className="service-feature-grid">{content.features.map((feature,index)=><article className="service-feature-card" key={feature.title}><span className="feature-number">0{index+1}</span><CheckCircle2 size={20}/><h3>{feature.title}</h3><p>{feature.text}</p><button onClick={() => onBook(feature.title)}>Learn more <ArrowRight size={14}/></button></article>)}</div>
