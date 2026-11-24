@@ -279,3 +279,8 @@ footer{min-height:100px;flex-wrap:wrap}
   .discovery-orb{animation:none!important;transition:none!important}
   .shortcut-card,.path-card,.journey-card{transition:none}
 }
+
+.hero-ambient{position:absolute;border-radius:50%;pointer-events:none;filter:blur(1px);z-index:0}
+.hero-ambient-a{width:280px;height:280px;right:-95px;top:90px;background:radial-gradient(circle,#8be5df88,transparent 68%)}
+.hero-ambient-b{width:230px;height:230px;left:42%;bottom:15px;background:radial-gradient(circle,#d9c6f288,transparent 70%)}
+.hero-grid-glow{position:absolute;right:0;top:0;width:55%;height:100%;pointer-events:none;z-index:0;opacity:.22;background-image:radial-gradient(#ffffff 1px,transparent 1px);background-size:19px 19px;mask-image:linear-gradient(90deg,transparent,black)}
