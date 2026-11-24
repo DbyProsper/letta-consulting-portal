@@ -421,3 +421,57 @@ footer{min-height:100px;flex-wrap:wrap}
 .student-discovery-callout p{max-width:620px;font-size:11px;line-height:1.65;color:#6e7f75;margin:0 0 18px}
 .student-dashboard-note{display:flex;align-items:center;gap:8px;color:#8ba098;font-size:9px;margin:20px 0 0}
 @media(max-width:760px){.student-dashboard{padding:18px 14px 60px}.student-welcome{grid-template-columns:1fr}.student-welcome-copy{padding:32px 25px}.student-welcome-copy h1{font-size:43px}.student-welcome-image{min-height:210px}.student-spark-one{right:18px;top:44%}.student-spark-two{left:auto;right:47%;bottom:195px}.student-progress-card{align-items:flex-start;flex-direction:column;padding:20px}.student-progress-meter{width:100%}.student-steps{grid-template-columns:1fr}.student-step p{min-height:0}.student-discovery-callout{grid-template-columns:1fr;padding:20px}.student-callout-art{min-height:125px}}
+
+
+/* Psychological wellness experience */
+.wellness-experience{max-width:1180px;margin:0 auto;padding:8px 5.5% 75px;color:#173f46}
+.wellness-welcome{display:grid;grid-template-columns:1fr 1fr;min-height:405px;border-radius:26px;overflow:hidden;background:#f1e9f4}
+.wellness-welcome-copy{padding:48px 8%;align-self:center}
+.wellness-kicker{display:inline-flex;align-items:center;gap:7px;color:#8b669b;font-size:9px;font-weight:900;letter-spacing:1.4px}
+.wellness-welcome-copy h2{font-family:Manrope,sans-serif;font-size:clamp(43px,5vw,66px);line-height:.91;letter-spacing:-3px;margin:19px 0;color:#203e48}
+.wellness-welcome-copy h2 em{font-style:normal;color:#9c75a9}
+.wellness-welcome-copy p,.wellness-toolkit-intro p,.wellness-section-heading p{max-width:420px;color:#687d7c;font-size:12px;line-height:1.75;margin:0 0 22px}
+.wellness-welcome-art{position:relative;min-height:405px;overflow:hidden;background:#d8c7e0}
+.wellness-photo{position:absolute;inset:0;background:linear-gradient(0deg,#1b344d60,transparent 60%),url('https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1100&q=88') center/cover}
+.wellness-art-note{position:absolute;bottom:25px;left:28px;color:white;font-size:9px;letter-spacing:2px;line-height:1.7}
+.wellness-art-note b{font-size:14px}.wellness-welcome-art>i{position:absolute;right:32px;top:25px;color:#fff;font-size:40px;font-style:normal}
+.wellness-checkin,.wellness-learn{padding:65px 2% 20px}
+.wellness-section-heading{max-width:640px;margin-bottom:22px}
+.wellness-section-heading h2,.wellness-toolkit-intro h2,.wellness-support h2{font-family:Manrope,sans-serif;font-size:clamp(28px,3.3vw,40px);letter-spacing:-1.5px;line-height:1.05;margin:10px 0}
+.wellness-section-heading p{margin-bottom:0}
+.wellness-feeling-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.wellness-feeling{display:flex;align-items:center;gap:12px;padding:17px;border:1px solid #e7e9e4;border-radius:15px;background:#fff;color:#31585b;text-align:left;transition:.2s}
+.wellness-feeling:hover,.wellness-feeling.selected{border-color:#b69ac2;background:#f8f2fa;transform:translateY(-2px)}
+.wellness-feeling span{font-size:25px}.wellness-feeling b{font-size:12px}
+.wellness-reflection{display:flex;align-items:flex-start;gap:13px;margin-top:14px;padding:17px 19px;border-radius:14px;background:#f1eaf4;color:#88649a}
+.wellness-reflection>div{flex:1}.wellness-reflection b{font-size:11px;color:#35565b}.wellness-reflection p{font-size:11px;line-height:1.6;color:#5d7474;margin:5px 0 0}
+.wellness-reflection button{border:0;background:#fff;border-radius:50%;width:31px;height:31px;color:#856a94}
+.wellness-privacy{font-size:9px;color:#91a09a;margin:12px 0}
+.wellness-toolkit{display:grid;grid-template-columns:.75fr 1.25fr;gap:32px;align-items:center;margin:48px 0;padding:35px;border-radius:22px;background:#e8f2eb}
+.wellness-toolkit-intro h2{font-size:32px}.wellness-toolkit-intro p{margin-bottom:0}
+.wellness-breath-card{display:grid;grid-template-columns:145px 1fr;gap:23px;align-items:center;padding:23px;border-radius:17px;background:#fff}
+.wellness-breath-visual{height:145px;position:relative;display:grid;place-items:center;border-radius:50%;background:radial-gradient(circle,#fff 0 27%,#d8efe6 28% 55%,#e9f4ee 56%);color:#4c9d8c}
+.wellness-breath-visual>span{z-index:1}.wellness-breath-visual i{position:absolute;inset:12px;border:1px solid #8fc7b5;border-radius:50%;animation:wellnessPulse 4s ease-in-out infinite}.wellness-breath-visual i:nth-child(2){inset:1px;animation-delay:.5s}.wellness-breath-visual i:nth-child(3){inset:22px;animation-delay:1s}
+@keyframes wellnessPulse{0%,100%{transform:scale(.9);opacity:.4}50%{transform:scale(1.08);opacity:1}}
+.wellness-breath-copy h3{font-family:Manrope,sans-serif;font-size:19px;line-height:1.2;margin:10px 0 7px;color:#23464d}
+.wellness-breath-copy p{font-size:10px;line-height:1.6;color:#718582;margin:0}
+.wellness-step-dots{display:flex;gap:6px;margin:14px 0}.wellness-step-dots span{width:19px;height:4px;border-radius:5px;background:#e1eae4}.wellness-step-dots span.active{background:#53a995}
+.wellness-breath-actions{display:flex;align-items:center;justify-content:space-between;gap:10px}.wellness-breath-actions .primary-button{padding:10px 14px;font-size:9px}
+.wellness-quiet-button{border:0;background:none;color:#66827b;font-size:9px;font-weight:800}
+.wellness-topic-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:13px}
+.wellness-topic-tabs button{border:1px solid #e1e9e3;border-radius:20px;background:#fff;padding:9px 15px;color:#617b75;font-size:10px;font-weight:800}
+.wellness-topic-tabs button.active{background:#173f46;color:#fff;border-color:#173f46}
+.wellness-resource-card{display:flex;align-items:center;gap:18px;padding:23px;border:1px solid #e7ece6;border-radius:17px;background:#fff}
+.wellness-resource-card>span{width:51px;height:51px;display:grid;place-items:center;flex-shrink:0;border-radius:15px;background:#f6e9d9;color:#b17e43}
+.wellness-resource-card>div{flex:1}.wellness-resource-card small{font-size:8px;letter-spacing:1.2px;font-weight:900;color:#a47c4c}
+.wellness-resource-card h3{font-family:Manrope,sans-serif;font-size:18px;margin:5px 0}
+.wellness-resource-card p{font-size:11px;line-height:1.65;color:#687e79;margin:0;max-width:700px}
+.wellness-resource-card>svg{color:#91b7a8;flex-shrink:0}
+.wellness-support{display:grid;grid-template-columns:1.2fr .8fr;gap:25px;align-items:center;margin:55px 0 22px;padding:34px 38px;border-radius:22px;background:#f8e9df}
+.wellness-support h2{font-size:34px}.wellness-support p{max-width:550px;font-size:11px;line-height:1.7;color:#6e7770;margin:0 0 18px}
+.wellness-support-art{min-height:180px;position:relative;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,#f0d1bf,#f7e8cf);overflow:hidden;color:#9d6f79}
+.wellness-support-circle{width:104px;height:104px;border-radius:50%;display:grid;place-items:center;background:#fff9ef;box-shadow:0 10px 28px #835b381a}
+.wellness-support-art>span{position:absolute;bottom:15px;font-size:8px;letter-spacing:2px;color:#9a7770;font-weight:900}
+.wellness-disclaimer{font-size:9px;line-height:1.6;color:#8a9891;margin:16px 2% 0;padding-top:15px;border-top:1px solid #e7e9e2}
+@media(max-width:850px){.wellness-toolkit{grid-template-columns:1fr}.wellness-toolkit-intro h2{max-width:450px}}
+@media(max-width:650px){.wellness-experience{padding:8px 14px 55px}.wellness-welcome{grid-template-columns:1fr}.wellness-welcome-copy{padding:34px 25px}.wellness-welcome-copy h2{font-size:48px}.wellness-welcome-art{min-height:230px}.wellness-checkin,.wellness-learn{padding:45px 0 10px}.wellness-feeling-grid{grid-template-columns:repeat(2,1fr);gap:8px}.wellness-feeling{padding:13px}.wellness-toolkit{margin:35px 0;padding:20px}.wellness-breath-card{grid-template-columns:1fr;padding:17px}.wellness-breath-visual{width:130px;height:130px;margin:0 auto}.wellness-support{grid-template-columns:1fr;padding:24px;margin:38px 0 18px}.wellness-support-art{min-height:145px}.wellness-resource-card{align-items:flex-start;padding:17px}.wellness-resource-card>svg{display:none}}
