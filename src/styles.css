@@ -475,3 +475,49 @@ footer{min-height:100px;flex-wrap:wrap}
 .wellness-disclaimer{font-size:9px;line-height:1.6;color:#8a9891;margin:16px 2% 0;padding-top:15px;border-top:1px solid #e7e9e2}
 @media(max-width:850px){.wellness-toolkit{grid-template-columns:1fr}.wellness-toolkit-intro h2{max-width:450px}}
 @media(max-width:650px){.wellness-experience{padding:8px 14px 55px}.wellness-welcome{grid-template-columns:1fr}.wellness-welcome-copy{padding:34px 25px}.wellness-welcome-copy h2{font-size:48px}.wellness-welcome-art{min-height:230px}.wellness-checkin,.wellness-learn{padding:45px 0 10px}.wellness-feeling-grid{grid-template-columns:repeat(2,1fr);gap:8px}.wellness-feeling{padding:13px}.wellness-toolkit{margin:35px 0;padding:20px}.wellness-breath-card{grid-template-columns:1fr;padding:17px}.wellness-breath-visual{width:130px;height:130px;margin:0 auto}.wellness-support{grid-template-columns:1fr;padding:24px;margin:38px 0 18px}.wellness-support-art{min-height:145px}.wellness-resource-card{align-items:flex-start;padding:17px}.wellness-resource-card>svg{display:none}}
+
+
+/* Professional support experience */
+.professional-experience{max-width:1180px;margin:0 auto;padding:8px 5.5% 75px;color:#173f46}
+.professional-welcome{display:grid;grid-template-columns:1fr 1fr;min-height:405px;border-radius:26px;overflow:hidden;background:#e7f0e9}
+.professional-welcome-copy{padding:48px 8%;align-self:center}
+.professional-kicker{display:inline-flex;align-items:center;gap:7px;color:#398a79;font-size:9px;font-weight:900;letter-spacing:1.35px}
+.professional-welcome-copy h2{font-family:Manrope,sans-serif;font-size:clamp(43px,5vw,66px);line-height:.91;letter-spacing:-3px;margin:19px 0;color:#203e48}
+.professional-welcome-copy h2 em{font-style:normal;color:#398a79}
+.professional-welcome-copy p,.professional-heading p{max-width:420px;color:#687d7c;font-size:12px;line-height:1.75;margin:0 0 22px}
+.professional-welcome-art{position:relative;min-height:405px;overflow:hidden;background:#c4ddd1}
+.professional-photo{position:absolute;inset:0;background:linear-gradient(0deg,#123d3b75,transparent 62%),url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1100&q=88') center/cover}
+.professional-welcome-art>span{position:absolute;bottom:25px;left:28px;color:white;font-size:9px;letter-spacing:2px;line-height:1.7}
+.professional-welcome-art>span b{font-size:14px}.professional-welcome-art>i{position:absolute;right:32px;top:25px;color:#fff;font-size:40px;font-style:normal}
+.professional-pathways{padding:65px 2% 20px}
+.professional-heading{max-width:640px;margin-bottom:22px}
+.professional-heading h2,.professional-partner-callout h2{font-family:Manrope,sans-serif;font-size:clamp(28px,3.3vw,40px);letter-spacing:-1.5px;line-height:1.05;margin:10px 0}
+.professional-heading p{margin-bottom:0}
+.professional-audience-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.professional-audience-tabs button{display:flex;align-items:center;gap:11px;padding:17px;border:1px solid #e3ebe4;border-radius:14px;background:#fff;color:#426a63;text-align:left;font-size:11px;font-weight:800;transition:.2s}
+.professional-audience-tabs button span{flex:1}
+.professional-audience-tabs button.active{background:#173f46;color:#fff;border-color:#173f46;box-shadow:0 8px 18px #173f461c}
+.professional-audience-tabs button:not(.active):hover{border-color:#83bca6;transform:translateY(-2px)}
+.professional-service-intro{margin:18px 0 10px;padding:15px 18px;border-radius:12px;background:#edf5ee;color:#5c7770;font-size:11px;line-height:1.6}
+.professional-service-list{display:grid;gap:9px}
+.professional-service-card{border:1px solid #e4ebe5;border-radius:15px;background:#fff;overflow:hidden}
+.professional-service-toggle{width:100%;display:flex;align-items:center;gap:17px;padding:19px 20px;border:0;background:transparent;text-align:left;color:#24494d}
+.professional-service-number{font-size:10px;font-weight:900;color:#8bb29d}
+.professional-service-title{display:grid;gap:5px;flex:1}
+.professional-service-title b{font-family:Manrope,sans-serif;font-size:16px}
+.professional-service-title small{font-size:10px;line-height:1.55;color:#718680;max-width:720px}
+.professional-chevron{width:30px;height:30px;display:grid;place-items:center;border-radius:50%;background:#eef5ef;color:#448e78;transition:transform .2s}
+.professional-service-card.expanded .professional-chevron{transform:rotate(180deg)}
+.professional-service-details{padding:0 22px 20px 58px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.professional-service-details ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
+.professional-service-details li{display:flex;align-items:center;gap:8px;font-size:10px;color:#607a72}
+.professional-service-details li svg{color:#4b9c7f;flex-shrink:0}
+.professional-service-details>button{display:flex;align-items:center;gap:8px;white-space:nowrap;border:1px solid #bdd8c6;border-radius:24px;padding:10px 14px;background:#f5faf5;color:#267b69;font-size:9px;font-weight:900}
+.professional-partner-callout{display:grid;grid-template-columns:.75fr 1.25fr;gap:30px;align-items:center;margin:50px 0 20px;padding:30px;border-radius:21px;background:#f7eade}
+.professional-partner-art{position:relative;min-height:175px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(135deg,#e7c7ae,#f4dfc8);color:#926e53;overflow:hidden}
+.professional-partner-art>div{width:90px;height:90px;display:grid;place-items:center;border-radius:50%;background:#fff9f0}
+.professional-partner-art>span{position:absolute;bottom:13px;font-size:8px;letter-spacing:1.7px;font-weight:900}
+.professional-partner-callout h2{font-size:31px}
+.professional-partner-callout p{max-width:620px;font-size:11px;line-height:1.7;color:#6e7770;margin:0 0 17px}
+.professional-note{font-size:9px;line-height:1.6;color:#8a9891;margin:16px 2% 0;padding-top:15px;border-top:1px solid #e7e9e2}
+@media(max-width:760px){.professional-experience{padding:8px 14px 55px}.professional-welcome{grid-template-columns:1fr}.professional-welcome-copy{padding:34px 25px}.professional-welcome-copy h2{font-size:48px}.professional-welcome-art{min-height:230px}.professional-pathways{padding:45px 0 10px}.professional-audience-tabs{grid-template-columns:1fr}.professional-audience-tabs button{padding:14px}.professional-service-toggle{padding:16px 13px;gap:10px}.professional-service-title b{font-size:14px}.professional-service-title small{font-size:9px}.professional-service-details{padding:0 15px 17px;align-items:flex-start;flex-direction:column}.professional-partner-callout{grid-template-columns:1fr;padding:20px;margin:35px 0 18px}.professional-partner-art{min-height:140px}.professional-partner-callout h2{font-size:27px}}
