@@ -284,3 +284,98 @@ footer{min-height:100px;flex-wrap:wrap}
 .hero-ambient-a{width:280px;height:280px;right:-95px;top:90px;background:radial-gradient(circle,#8be5df88,transparent 68%)}
 .hero-ambient-b{width:230px;height:230px;left:42%;bottom:15px;background:radial-gradient(circle,#d9c6f288,transparent 70%)}
 .hero-grid-glow{position:absolute;right:0;top:0;width:55%;height:100%;pointer-events:none;z-index:0;opacity:.22;background-image:radial-gradient(#ffffff 1px,transparent 1px);background-size:19px 19px;mask-image:linear-gradient(90deg,transparent,black)}
+
+/* Career discovery workspace */
+.career-workspace{max-width:1250px;margin:58px auto 62px;padding:0 24px;color:#0b3640}
+.career-workspace-head{display:flex;align-items:center;justify-content:space-between;gap:25px;margin-bottom:25px}
+.career-workspace-head h2{font-family:Manrope,sans-serif;font-size:clamp(28px,3vw,40px);letter-spacing:-1.8px;line-height:1.06;margin:9px 0}
+.career-workspace-head p{font-size:12px;color:#668087;margin:0;line-height:1.5}
+.career-workspace-mark{width:112px;height:112px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex-shrink:0;background:radial-gradient(circle at 32% 25%,#fff,#c4eee4);color:#07878b;box-shadow:0 12px 28px #0d65601a,inset 0 0 0 1px #fff}
+.career-workspace-mark span{font-size:8px;letter-spacing:1.3px;font-weight:900;text-align:center;line-height:1.4}
+.career-tabs{display:flex;gap:7px;overflow-x:auto;padding:7px;margin-bottom:20px;border:1px solid #e0ece6;border-radius:16px;background:#edf5f0;scrollbar-width:thin}
+.career-tabs button{border:0;background:transparent;border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:8px;white-space:nowrap;color:#5c7779;font-size:10px;font-weight:800;transition:background .2s,color .2s}
+.career-tabs button.active{background:#07343e;color:#fff;box-shadow:0 5px 12px #0a46501f}
+.career-tab-content{padding:26px;border:1px solid #e6eee8;border-radius:22px;background:#fffefa;box-shadow:0 14px 35px #144b3d08}
+.discovery-progress{display:flex;align-items:center;gap:10px;margin:0 0 28px;color:#72908b;font-size:8px;font-weight:900;letter-spacing:1px}
+.discovery-progress span{display:flex;align-items:center;gap:7px;white-space:nowrap}
+.discovery-progress b{width:23px;height:23px;border-radius:50%;display:grid;place-items:center;background:#e0f4eb;color:#078d8b;font-size:9px}
+.discovery-progress i{height:1px;flex:1;background:#dce9e2}
+.career-question{padding:23px 0;border-top:1px solid #edf1ed}
+.career-question h3,.career-section-intro h3,.career-results-heading h3{font-family:Manrope,sans-serif;font-size:23px;letter-spacing:-.8px;margin:8px 0}
+.career-question>p,.career-section-intro>p,.career-results-heading>p{font-size:11px;line-height:1.5;color:#6a8182;margin:0 0 17px}
+.career-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.career-choice{position:relative;text-align:left;display:flex;flex-direction:column;gap:6px;min-height:94px;padding:16px 38px 15px 15px;border:1px solid #e2ebe5;border-radius:13px;background:#fff;color:#123e47;transition:border-color .2s,background .2s,transform .2s}
+.career-choice:hover{transform:translateY(-2px);border-color:#93cec2}
+.career-choice.selected{border-color:#0a9b98;background:#eaf8f1;box-shadow:inset 0 0 0 1px #0a9b9822}
+.career-choice b{font-family:Manrope,sans-serif;font-size:12px;line-height:1.3}
+.career-choice small{font-size:9px;line-height:1.35;color:#73898a}
+.choice-check{position:absolute;right:13px;top:13px;width:21px;height:21px;border-radius:50%;display:grid;place-items:center;background:#edf4ef;color:#78908c;font-size:13px;font-weight:800}
+.career-choice.selected .choice-check{background:#079d98;color:white}
+.subject-chip-list{display:flex;flex-wrap:wrap;gap:8px}
+.subject-chip{border:1px solid #dce8e1;background:white;border-radius:30px;padding:9px 12px;display:flex;align-items:center;gap:5px;color:#527174;font-size:9px;font-weight:800}
+.subject-chip.selected{border-color:#79c9b6;background:#e9f8f0;color:#087d79}
+.career-submit-row{display:flex;align-items:center;gap:12px;padding:18px 0 5px;border-top:1px solid #edf1ed}
+.career-submit-row>div{display:flex;flex-direction:column;gap:4px;margin-right:auto}
+.career-submit-row>div b{font-size:11px}
+.career-submit-row>div small,.cv-form>small{font-size:9px;color:#819391}
+.career-reset{display:flex;align-items:center;gap:6px;border:1px solid #dbe7e1;background:#fff;border-radius:20px;padding:10px 12px;color:#577477;font-size:9px;font-weight:800}
+.career-submit-row .primary-button:disabled{opacity:.45;cursor:not-allowed}
+.career-results{margin-top:25px;padding:24px;border-radius:18px;background:linear-gradient(125deg,#e9f7f0,#f5f5e9);border:1px solid #fff}
+.career-match-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin:17px 0}
+.career-match-card{padding:18px;border:1px solid #ffffff;border-radius:14px;background:#ffffffb8}
+.match-number{font-size:8px;font-weight:900;letter-spacing:1.1px;color:#0a9993}
+.career-match-card h4,.career-catalogue-card h4,.study-pathway-card h4,.opportunity-card h4{font-family:Manrope,sans-serif;font-size:16px;line-height:1.2;margin:11px 0 4px}
+.career-match-card>small{font-size:9px;color:#78908c}
+.career-match-card>p,.career-catalogue-card>p,.study-pathway-card>p,.opportunity-card>p{font-size:10px;line-height:1.5;color:#647d7d}
+.career-match-card>div{display:flex;flex-direction:column;gap:5px;padding-top:11px;border-top:1px solid #e4eee7}
+.career-match-card>div b,.career-catalogue-card>div b{font-size:9px;color:#0a7776}
+.career-match-card>div span{font-size:9px;line-height:1.45;color:#5e7778}
+.career-more{font-size:10px}
+.career-section-intro{max-width:720px;margin-bottom:20px}
+.career-search{height:46px;border:1px solid #dce9e2;background:#fff;border-radius:12px;padding:0 14px;display:flex;align-items:center;gap:10px;color:#078e91;margin-bottom:17px}
+.career-search input{width:100%;border:0;outline:0;background:transparent;font:inherit;font-size:11px;color:#123e47}
+.career-catalogue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.career-catalogue-card{padding:18px;border:1px solid #e7eee8;border-radius:14px;background:#fff}
+.career-catalogue-card>span{font-size:8px;letter-spacing:.8px;font-weight:900;color:#0b9a94;text-transform:uppercase}
+.career-catalogue-card h4{margin:9px 0 5px}
+.career-catalogue-card>p{min-height:48px}
+.career-catalogue-card>div{padding-top:10px;border-top:1px solid #edf1ed;display:flex;flex-direction:column;gap:5px}
+.career-catalogue-card>div small{font-size:9px;line-height:1.45;color:#657d7e}
+.career-empty{grid-column:1/-1;padding:25px;text-align:center;color:#718989;font-size:11px}
+.study-pathway-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.study-pathway-card{position:relative;padding:21px 17px;border:1px solid #e3ece5;border-radius:15px;background:linear-gradient(145deg,#fff,#f4faf5)}
+.study-pathway-card>svg{color:#078f91}
+.study-pathway-number{position:absolute;right:15px;top:14px;color:#a3bdb3;font-size:9px;font-weight:900}
+.study-pathway-card h4{font-size:14px;min-height:34px}
+.study-pathway-card>b{font-size:9px;color:#0a8887}
+.study-pathway-card>p{margin-bottom:0}
+.study-note{display:flex;align-items:flex-start;gap:12px;padding:15px 17px;margin-top:17px;border:1px solid #dceee4;border-radius:13px;background:#edf8f1;color:#078b88}
+.study-note>svg{flex-shrink:0;margin-top:2px}
+.study-note p{font-size:10px;line-height:1.55;color:#587477;margin:0}
+.study-note b{color:#0b5356}
+.opportunity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.opportunity-card{position:relative;padding:21px;border:1px solid #e5eee8;border-radius:15px;background:#fff}
+.opportunity-card>span{font-size:9px;font-weight:900;letter-spacing:1px;color:#0b9a94}
+.opportunity-card h4{margin:9px 0 5px}
+.opportunity-card ul{padding-left:16px;margin:12px 0 0;color:#617b7b}
+.opportunity-card li{font-size:9px;line-height:1.7}
+.cv-builder-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px;align-items:start}
+.cv-form{display:grid;gap:12px}
+.cv-form label{display:grid;gap:6px;color:#365f62;font-size:9px;font-weight:900}
+.cv-form input,.cv-form textarea{width:100%;border:1px solid #dce8e1;border-radius:10px;padding:11px 12px;background:#fff;color:#123e47;font:inherit;font-size:11px;outline:none;resize:vertical}
+.cv-form input:focus,.cv-form textarea:focus{border-color:#079b98;box-shadow:0 0 0 3px #079b9818}
+.cv-form .primary-button{justify-content:center}
+.cv-preview{min-height:350px;padding:25px;border:1px solid #dfe9e2;border-radius:14px;background:white;box-shadow:0 8px 20px #0a403c0a}
+.cv-preview h4{font-family:Manrope,sans-serif;font-size:23px;margin:12px 0 3px}
+.cv-preview>p{font-size:10px;line-height:1.55;color:#62797a;white-space:pre-wrap;margin:7px 0 18px}
+.cv-preview hr{border:0;border-top:1px solid #e5ece7;margin:17px 0}
+.cv-preview>b{font-size:9px;letter-spacing:.8px;color:#078b89}
+@media(max-width:900px){.study-pathway-grid,.career-catalogue{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+.career-workspace{margin:35px auto 40px;padding:0 14px}.career-workspace-head{align-items:flex-start}.career-workspace-head h2{font-size:28px}.career-workspace-head p{font-size:10px}.career-workspace-mark{width:75px;height:75px}.career-workspace-mark svg{width:20px}.career-workspace-mark span{font-size:6px}
+.career-tabs{margin:0 -2px 14px;padding:5px}.career-tabs button{padding:10px;font-size:9px}.career-tab-content{padding:17px 13px;border-radius:16px}
+.discovery-progress{gap:5px;font-size:6px;letter-spacing:.4px}.discovery-progress span{gap:4px}.discovery-progress b{width:18px;height:18px;font-size:7px}
+.career-question{padding:19px 0}.career-question h3,.career-section-intro h3,.career-results-heading h3{font-size:20px}.career-choice-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.career-choice{min-height:94px;padding:13px 29px 12px 11px}.career-choice b{font-size:10px}.career-choice small{font-size:8px}.choice-check{right:8px;top:9px;width:17px;height:17px;font-size:10px}
+.subject-chip{font-size:8px;padding:8px 10px}.career-submit-row{flex-wrap:wrap;gap:8px}.career-submit-row>div{width:100%;margin:0 0 5px}.career-submit-row .primary-button{flex:1;justify-content:center}
+.career-match-grid,.career-catalogue,.study-pathway-grid,.opportunity-grid,.cv-builder-grid{grid-template-columns:1fr}.career-match-card>p,.career-catalogue-card>p{min-height:0}.study-pathway-card h4{min-height:0}.cv-preview{min-height:0}
+}
