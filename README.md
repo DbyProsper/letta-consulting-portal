@@ -13,7 +13,9 @@ A responsive React + Vite + TypeScript frontend for Letta Consulting's career gu
 - Career Discovery workspace with an interests, strengths and school-subject questionnaire, explainable career idea matching, searchable career catalogue and South African study-route overview.
 - Dedicated Opportunity Hub with category exploration and session-only preparation checklists for bursaries, learnerships, internships and career events.
 - CV first-draft builder with live preview and copy-to-clipboard support.
-- Parent and guardian support, school partnerships and corporate wellness shortcuts.
+- Dedicated Parent & Guardian Space with family conversation guides and a session-only support checklist.
+- Future Games with strengths reflection and practical career-decision challenges; activities are not psychometric assessments.
+- Parent and guardian, school partnership and corporate wellness entry points.
 - Five-language selector preview: English, isiZulu, Sesotho, Setswana and isiXhosa.
 - Responsive layouts and reduced-motion support.
 - Frontend enquiry modal with prototype-only confirmation state.
