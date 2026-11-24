@@ -17,7 +17,7 @@ const pathways = [
 const journeys = [
   { title: 'Career World', text: 'Explore careers & study pathways', image: 'photo-1523240795612-9a054b0db644', tag: '01', key: 'career' as const },
   { title: 'Wellness Space', text: 'Manage stress & build resilience', image: 'photo-1544005313-94ddf0286df2', tag: '02', key: 'wellness' as const },
-  { title: 'Future Games', text: 'Learn through play', image: 'photo-1493711662062-fa541f8b4e5a', tag: '03', key: 'career' as const },
+  { title: 'Future Games', text: 'Learn through play', image: 'photo-1493711662062-fa541f8b4e5a', tag: '03', key: 'games' as const },
   { title: 'My Future', text: 'Set goals & track your progress', image: 'photo-1521737711867-e3b97375f902', tag: '04', key: 'dashboard' as const },
 ]
 
