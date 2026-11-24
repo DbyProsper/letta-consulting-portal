@@ -11,7 +11,7 @@ A responsive React + Vite + TypeScript frontend for Letta Consulting's career gu
 - Psychological Wellness space with a private session-only check-in, guided breathing pause and practical wellbeing notes.
 - Audience-led Professional Support experience for individuals, schools and workplaces, with expandable service details and enquiry entry points.
 - Career Discovery workspace with an interests, strengths and school-subject questionnaire, explainable career idea matching, searchable career catalogue and South African study-route overview.
-- Opportunity Hub preparation checklists for bursaries, learnerships, internships and career events.
+- Dedicated Opportunity Hub with category exploration and session-only preparation checklists for bursaries, learnerships, internships and career events.
 - CV first-draft builder with live preview and copy-to-clipboard support.
 - Parent and guardian support, school partnerships and corporate wellness shortcuts.
 - Five-language selector preview: English, isiZulu, Sesotho, Setswana and isiXhosa.
