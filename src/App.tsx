@@ -10,7 +10,7 @@ const paths = [
 const journeys = [
   { title: 'Career World', text: 'Explore careers & study pathways', image: 'photo-1516321318423-f06f85e504b3', tag: '01' },
   { title: 'Wellness Space', text: 'Manage stress & build resilience', image: 'photo-1544005313-94ddf0286df2', tag: '02' },
-  { title: 'Future Games', text: 'Learn through play', image: 'photo-1493711662062-fa541 jak?auto=format', tag: '03' },
+  { title: 'Future Games', text: 'Learn through play', image: 'photo-1493711662062-fa541f8b4e5a', tag: '03' },
   { title: 'My Future', text: 'Set goals & track your progress', image: 'photo-1521737711867-e3b97375f902', tag: '04' },
 ]
 const experts = [
@@ -89,7 +89,7 @@ function App() {
 
     <section className="path-panel panel" id="paths">
       <div className="panel-intro"><span className="section-kicker">FIND YOUR STARTING POINT</span><h2>Choose<br/>your path</h2><p>Explore. Learn. Plan.</p><div className="path-arrows"><button aria-label="Previous path" onClick={() => setActivePath((activePath + 2) % 3)}>←</button><button aria-label="Next path" onClick={() => setActivePath((activePath + 1) % 3)}>→</button></div></div>
-      <div className="path-cards">{paths.map((p,i) => <motion.button whileHover={{y:-5}} className={'path-card '+p.tone+(activePath===i?' chosen':'')} key={p.title} onClick={() => {setActivePath(i);setNotice(p.subtitle)}} style={{backgroundImage:`linear-gradient(0deg,rgba(2,35,43,.84),transparent 65%),url(https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=900&q=85)`}}><span className="path-caption"><p><p.icon size={23}/></p><b>{p.title}</b><small>{p.subtitle}</small></span><span className="round-arrow"><ArrowRight size={18}/></span></motion.button>)}</div>
+      <div className="path-cards">{paths.map((p,i) => <motion.button whileHover={{y:-5}} className={'path-card '+p.tone+(activePath===i?' chosen':'')} key={p.title} onClick={() => {setActivePath(i);setNotice(p.subtitle)}} style={{backgroundImage:`linear-gradient(0deg,rgba(2,35,43,.84),transparent 65%),url(https://images.unsplash.com/${p.image}?auto=format&fit=crop&w=900&q=85)`}}><span className="path-caption"><span className="path-icon"><p.icon size={23}/></span><b>{p.title}</b><small>{p.subtitle}</small></span><span className="round-arrow"><ArrowRight size={18}/></span></motion.button>)}</div>
       <div className="panel-dots">{paths.map((p,i)=><button aria-label={'Show '+p.title} className={activePath===i?'selected':''} key={p.title} onClick={()=>setActivePath(i)}/>)}</div>
     </section>
 
