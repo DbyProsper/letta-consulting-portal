@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { ArrowRight, BriefcaseBusiness, CalendarDays, ChevronDown, Compass, FileText, Globe2, Heart, Menu, School, Trophy, Users, X } from 'lucide-react'
 import DiscoveryHero from './components/DiscoveryHero'
 import ServiceExperience from './components/ServiceExperience'
+import StudentDashboard from './components/StudentDashboard'
 import type { PortalKey } from './data/portalContent'
 
 const pathways = [
@@ -14,7 +15,7 @@ const journeys = [
   { title: 'Career World', text: 'Explore careers & study pathways', image: 'photo-1523240795612-9a054b0db644', tag: '01', key: 'career' as const },
   { title: 'Wellness Space', text: 'Manage stress & build resilience', image: 'photo-1544005313-94ddf0286df2', tag: '02', key: 'wellness' as const },
   { title: 'Future Games', text: 'Learn through play', image: 'photo-1493711662062-fa541f8b4e5a', tag: '03', key: 'career' as const },
-  { title: 'My Future', text: 'Set goals & track your progress', image: 'photo-1521737711867-e3b97375f902', tag: '04', key: 'career' as const },
+  { title: 'My Future', text: 'Set goals & track your progress', image: 'photo-1521737711867-e3b97375f902', tag: '04', key: 'dashboard' as const },
 ]
 
 const shortcuts = [
@@ -63,10 +64,10 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [language, setLanguage] = useState('English')
   const [languageOpen, setLanguageOpen] = useState(false)
-  const [activePage, setActivePage] = useState<PortalKey | null>(null)
+  const [activePage, setActivePage] = useState<PortalKey | 'dashboard' | null>(null)
   const [bookingService, setBookingService] = useState<string | null>(null)
 
-  const openPage = (page: PortalKey) => {
+  const openPage = (page: PortalKey | 'dashboard') => {
     setActivePage(page)
     setMenuOpen(false)
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -77,6 +78,7 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  if (activePage === 'dashboard') return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><StudentDashboard onExplore={() => openPage('career')} onHome={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}/></>
   if (activePage) return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><ServiceExperience page={activePage} onBack={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}} onBook={openBooking}/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
 
   return <main>
