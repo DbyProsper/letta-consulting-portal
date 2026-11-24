@@ -80,7 +80,6 @@ function App() {
   if (activePage) return <><header className="topbar service-topbar"><Brand/><button className="service-home-link" onClick={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}}>Home <ArrowRight size={15}/></button></header><ServiceExperience page={activePage} onBack={() => {setActivePage(null);window.scrollTo({top:0,behavior:'smooth'})}} onBook={openBooking}/>{bookingService && <BookingModal service={bookingService} onClose={()=>setBookingService(null)}/>}</>
 
   return <main>
-    <DiscoveryHero onExplore={() => scrollTo('paths')}/>
     <header className="topbar home-topbar">
       <Brand/>
       <nav className={menuOpen ? 'nav open' : 'nav'} aria-label="Main navigation">
@@ -99,6 +98,7 @@ function App() {
       </div>
       <button className="mobile-menu" onClick={()=>setMenuOpen(!menuOpen)} aria-label="Toggle navigation" aria-expanded={menuOpen}>{menuOpen?<X/>:<Menu/>}</button>
     </header>
+    <DiscoveryHero onExplore={() => scrollTo('paths')}/>
 
     <section className="path-panel panel" id="paths">
       <div className="panel-intro"><span className="section-kicker">FIND YOUR STARTING POINT</span><h2>Choose<br/>your path</h2><p>Explore. Learn. Plan.</p><span className="intro-decoration">✳</span></div>
